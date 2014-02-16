@@ -1,1 +1,1 @@
-var simpleSiteMode = false;
+var simpleSiteMode = true;

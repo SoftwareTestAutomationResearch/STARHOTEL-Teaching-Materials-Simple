@@ -1,6 +1,9 @@
 package introwork;
-import java.io.File;
 
+import static org.hamcrest.core.Is.is;
+import static org.junit.Assert.assertThat;
+
+import java.io.File;
 import org.apache.commons.lang3.SystemUtils;
 import org.junit.After;
 import org.junit.Before;
@@ -9,7 +12,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 /**
- * 入門課題その5:「チェックボックスを選択してみよう」
+ * 入門課題その5:「表示された値のチェックをしてみよう」
  */
 public class IntroWork5 {
     private WebDriver driver;
@@ -42,7 +45,7 @@ public class IntroWork5 {
         String url = "file:///" + html.getAbsolutePath();
         driver.get(url);
         
-        // TODO 以下を削除して、代わりにチェックボックスを選択する処理を記述ください
+        // TODO 以下を削除して、代わりにプルダウンを選択する処理を記述してください
         try {
             Thread.sleep(8000);
         } catch (InterruptedException e) {

@@ -1,7 +1,4 @@
 package introwork;
-import static org.junit.Assert.*;
-import static org.hamcrest.core.Is.*;
-
 import java.io.File;
 
 import org.apache.commons.lang3.SystemUtils;
@@ -14,10 +11,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 /**
- * 入門課題その7:「表示された値のチェックをしてみよう」
+ * 入門課題その4:「チェックボックスを選択してみよう」
  * 解答例
  */
-public class IntroWork7 {
+public class IntroWork4 {
     private WebDriver driver;
     
     private String chromeDriverPath() {
@@ -44,11 +41,13 @@ public class IntroWork7 {
     
     @Test
     public void test() {
-        File html = new File("introwork/introWork7.html");
+        File html = new File("introwork/introWork4.html");
         String url = "file:///" + html.getAbsolutePath();
         driver.get(url);
         
-        WebElement total = driver.findElement(By.id("total"));
-        assertThat(total.getText(), is("9000"));
+        WebElement allowedCheck = driver.findElement(By.id("allowed_check"));
+        if (!allowedCheck.isSelected()) {
+            allowedCheck.click();
+        }
     }
 }

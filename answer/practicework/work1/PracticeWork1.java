@@ -59,7 +59,6 @@ public class PracticeWork1 {
         driver.findElement(By.id("reserve_term")).sendKeys("1");
         driver.findElement(By.id("headcount")).clear();
         driver.findElement(By.id("headcount")).sendKeys("9");
-        driver.findElement(By.id("breakfast_on")).click();
         WebElement planA = driver.findElement(By.id("plan_a"));
         if (!planA.isSelected()) {
             planA.click();
@@ -73,12 +72,11 @@ public class PracticeWork1 {
         driver.findElement(By.id("goto_next")).click();
         
         // 2ページ目入力画面
-        assertThat(driver.findElement(By.id("price")).getText(), is("105750"));
+        assertThat(driver.findElement(By.id("price")).getText(), is("96750"));
         assertThat(driver.findElement(By.id("datefrom")).getText(), is("2014年3月15日"));
         assertThat(driver.findElement(By.id("dateto")).getText(), is("2014年3月16日"));
         assertThat(driver.findElement(By.id("dayscount")).getText(), is("1"));
         assertThat(driver.findElement(By.id("hc")).getText(), is("9"));
-        assertThat(driver.findElement(By.id("bf_order")).getText(), is("あり"));
         assertThat(driver.findElement(By.id("plan_a_order")).getText(), is("昼からチェックインプラン"));
         assertThat(driver.findElement(By.id("plan_b_order")).getText(), is("お得な観光プラン"));
         assertThat(driver.findElement(By.id("gname")).getText(), is("a"));

@@ -17,7 +17,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
  * 入門課題その5:「表示された値のチェックをしてみよう」
  * 解答例
  */
-public class IntroWork7 {
+public class IntroWork5 {
     private WebDriver driver;
     
     private String chromeDriverPath() {
